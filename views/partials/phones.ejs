@@ -1,0 +1,22 @@
+<div>
+    <div class="span2">
+        Search: <input ng-model="query">
+    </div>  
+    <br>
+    Phones ({{phones.length}}):
+    <div id="status">Current filter: {{query}}</div>
+
+    Sort by:
+    <select ng-model="orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="age">Newest</option>
+    </select><br>
+    Current value: {{orderProp}}
+
+    <ul class="phones">
+      <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+</div>
