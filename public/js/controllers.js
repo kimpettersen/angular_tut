@@ -12,7 +12,7 @@ function AppCtrl($scope, $http) {
   });
 }
 
-function PhoneListCtrl($, $http) {
+function PhoneListCtrl($scope, $http) {
   $http.get('/api/phones').success(function(data) {
     $scope.phones = data;
   });
@@ -22,7 +22,6 @@ function PhoneListCtrl($, $http) {
   $scope.orderProp = 'age';
 
 }
-
 
 function MyCtrl2() {
 }

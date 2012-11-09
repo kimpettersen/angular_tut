@@ -1,19 +1,14 @@
 describe('PhoneCat controllers', function(){
-    describe(PhoneListCtrl, function(){
-        
-        var scope, ctrl;
+    describe('PhoneListCtrl', function(){
+            var scope, ctrl, $httpBackend;
 
-        beforeEach(function(){
-            scope = {};
-            ctrl = new PhoneListCtrl(scope);
-        });
+            beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
+            $httpBackend = _$httpBackend_;
+            $httpBackend.expectGET('c').
+            respond([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 
-        it('Should create "phones" with 3 phones', function(){
-            expect(scope.phones.length).toBe(3);
-        });
-
-        it('should set the default value of orderProp model', function(){
-            expect(scope.orderProp).toBe('age');
-        });
+            scope = $rootScope.$new();
+            ctrl = $controller(PhoneListCtrl, {$scope: scope});
+        }));
     });
 });
