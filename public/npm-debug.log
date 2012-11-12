@@ -1,0 +1,62 @@
+info it worked if it ends with ok
+verbose cli [ 'node',
+verbose cli   '/usr/local/bin/npm',
+verbose cli   'install',
+verbose cli   '-g',
+verbose cli   'testacular@canary' ]
+info using npm@1.1.12
+info using node@v0.6.14
+verbose config file /Users/kim/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+silly exec /usr/local/bin/node "/usr/local/lib/node_modules/npm/bin/npm-get-uid-gid.js" "nobody" 20
+silly spawning [ '/usr/local/bin/node',
+silly spawning   [ '/usr/local/lib/node_modules/npm/bin/npm-get-uid-gid.js',
+silly spawning     'nobody',
+silly spawning     20 ],
+silly spawning   null ]
+silly output from getuid/gid {"uid":-2,"gid":20}
+silly output from getuid/gid 
+verbose cache add [ 'testacular@canary', null ]
+silly cache add: name, spec, args [ undefined, 'testacular@canary', [ 'testacular@canary', null ] ]
+verbose parsed url { pathname: 'testacular@canary',
+verbose parsed url   path: 'testacular@canary',
+verbose parsed url   href: 'testacular@canary' }
+silly cache add: name, spec, args [ 'testacular', 'canary', [ 'testacular', 'canary' ] ]
+verbose parsed url { pathname: 'canary', path: 'canary', href: 'canary' }
+verbose addNamed [ 'testacular', 'canary' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'testacular', 'canary' ]
+verbose raw, before any munging testacular
+verbose url resolving [ 'https://registry.npmjs.org/', './testacular' ]
+verbose url resolved https://registry.npmjs.org/testacular
+verbose etag "5W6QY4GDHU7EDO9VNK315WW3Y"
+http GET https://registry.npmjs.org/testacular
+http 304 https://registry.npmjs.org/testacular
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"5W6QY4GDHU7EDO9VNK315WW3Y"',
+silly get cb     date: 'Sat, 10 Nov 2012 19:59:42 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag testacular from cache
+ERR! Error: No compatible version found: testacular@'canary'
+ERR! Valid install targets:
+ERR! ["0.0.7","0.0.8","0.0.9","0.0.10","0.0.11","0.0.12","0.0.13","0.0.14","0.0.15","0.0.16","0.0.17"]
+ERR!     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:486:10)
+ERR!     at /usr/local/lib/node_modules/npm/lib/cache.js:373:15
+ERR!     at saved (/usr/local/lib/node_modules/npm/lib/utils/npm-registry-client/get.js:150:7)
+ERR!     at Object.oncomplete (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:230:7)
+ERR! You may report this log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 11.4.2
+ERR! command "node" "/usr/local/bin/npm" "install" "-g" "testacular@canary"
+ERR! cwd /Users/kim/dev_repositories/angular_tut/public
+ERR! node -v v0.6.14
+ERR! npm -v 1.1.12
+ERR! message No compatible version found: testacular@'canary'
+ERR! message Valid install targets:
+ERR! message ["0.0.7","0.0.8","0.0.9","0.0.10","0.0.11","0.0.12","0.0.13","0.0.14","0.0.15","0.0.16","0.0.17"]
+verbose exit [ 1, true ]
